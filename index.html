@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A web application to show photos of bromos"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Mohammad Hasan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="asset/favicon.ico" type="image/x-icon">
+    <!-- TITLE -->
+    <title>ASABROMO</title>
+  </head>
+  <body>
+    <nav>
+      <span class="mobile">
+        <img
+          src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg"
+          alt="Hamburger Icon"
+        />
+      </span>
+      <span class="relative-container">
+        <img src="asset/logo-asabromo.png" alt="Logo AsaBromo" />
+        <img
+          class="text-logo"
+          src="asset/text-asabromo.png"
+          alt="text asabromo"
+        />
+      </span>
+
+      <ul id="list-menu" class="list-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#travel">ARTICLE</a></li>
+        <li><a href="#about">DOCUMENTATION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <!-- DARK MODE SECTION -->
+      <span id="dark-mode-switch">
+        <label class="switch">
+          <input
+            id="checkbox-dark-mode"
+            onchange="toggleDarkMode()"
+            type="checkbox"
+          />
+          <span class="slider round"></span>
+        </label>
+      </span>
+    </nav>
+    <header class="full-screen" id="header">
+      <h1>Explore Your Journey</h1>
+      <p>
+        Mount Bromo is one of the active volcanoes in East Java. This mountain
+        has a height of about 2,329 meters above sea level. Mount Bromo is
+        located in four districts: Probolinggo Regency, Pasuruan Regency,
+        Lumajang Regency, and Malang Regency. Mount Bromo is included in the
+        Bromo Tengger Semeru National Park area. Mount Bromo is famous as a
+        significant tourist attraction in East Java. As a tourist attraction,
+        Bromo is interesting because of its status as an active volcano.
+      </p>
+    </header>
+    <main>
+      <section id="bromo-photos">
+        <h2>GALERYS BROMO MOUNT</h2>
+        <div class="grid-container">
+          <div class="bromo-photo-item" id="item-1">
+            <img src="asset/bromo-2.jpg" alt="bromo." />
+          </div>
+          <div class="bromo-photo-item" id="item-2">
+            <img src="asset/bromo-4.jpg" alt="bromo." />
+          </div>
+          <div class="bromo-photo-item" id="item-3">
+            <img src="asset/seruni-poin.webp" alt="bromo." />
+          </div>
+          <div class="bromo-photo-item" id="item-4">
+            <img src="asset/riding-horse.jpg" alt="bromo." />
+          </div>
+          <div class="bromo-photo-item" id="item-5">
+            <img src="asset/bromo-5.jpg" alt="bromo." />
+          </div>
+        </div>
+      </section>
+
+      <section id="bromo-facts">
+        <h2>FACTS ABOUT BROMO MOUNT</h2>
+        <div class="flex-container">
+          <ul>
+            <li>Mount Bromo comes from the Sanskrit Brahma, one of the Main Gods
+              in Hinduism, in the Tengger language. It is spelt Brahma.</li>
+              
+            </li>
+            <li>Mount Bromo is in the same area as Mount Semeru, which is the
+              highest mountain on the island of Java; besides that, there are
+              also Mount Batok, Mount Widodaren, Mount Watangan, and Mount
+              Kursi, which are in the Tengger Mountains complex.
+              
+            </li>
+            <li>This mountain is considered sacred, especially by the people of
+              the Tengger Tribe, who live around the slopes of the mountain.
+              Traditional ceremonies are often held around Mount Bromo every
+              year, such as the Yadnya Kasada (Kasodho).</li>
+          </ul>
+          <figure>
+            <img
+              class="facts"
+              src="asset/bromo-sunset-potrait.jpg"
+              alt="bromo."
+            />
+            <figcaption>bromo <em>Your</em> Journey.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="section-video">
+        <h2>DOCUMENTATION</h2>
+        <div class="flex-container">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/TEXBgNVt19Q"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            display="block"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="form-section">
+        <h2>CONTACT</h2>
+        <form>
+          <fieldset class="form-personal">
+            <legend>Personal Information</legend>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Date of Birth:</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="lie">
+              <p>Are you living in Indonesia?</p>
+              <input type="radio" id="yes" name="isIndonesia" value="negara" />
+              <label for="yes">Yes</label>
+              <input type="radio" id="no" name="isIndonesia" value="negara" />
+              <label for="no">No</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-role">
+            <legend>Destination Choice:</legend>
+            <div class="padang-radio">
+              <input
+                type="checkbox"
+                id="padang"
+                name="role"
+                value="padang"
+                required
+              />
+              <label for="padang">Padang Savana</label>
+            </div>
+            <div class="bridge-radio">
+              <input
+                type="checkbox"
+                id="bridge"
+                name="role"
+                value="bridge"
+                required
+              />
+              <label for="bridge">Glass Bridge</label>
+            </div>
+            <div class="teletubies-radio">
+              <input
+                type="checkbox"
+                id="teletubies"
+                name="role"
+                value="teletubies"
+                required
+              />
+              <label for="teletubies">Teletubbies Hill</label>
+            </div>
+            <div class="kawah-radio">
+              <input
+                type="checkbox"
+                id="kawah"
+                name="role"
+                value="kawah"
+                required
+              />
+              <label for="kawah">Kawah Bromo</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="text-form">
+            <legend>Additional Preferences</legend>
+            <div class="form-group">
+              <textarea
+                id="description"
+                name="description"
+                placeholder="What impression did you get when you went to Bromo?"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter">Subscribe to newsletter</label>
+            </div>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ==========Footer Start========== -->
+    <footer>
+      <p class="copyright">
+        © Copyright 2023 By Mohammad Hasan | Weekly 3 Assignment.
+      </p>
+    </footer>
+
+    <script>
+      // initial state
+      if (localStorage.getItem("darkMode") === "true") {
+        document.getElementById("checkbox-dark-mode").checked = true;
+        document.body.classList.add("dark-mode");
+      }
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        if (!document.getElementById("checkbox-dark-mode").checked) {
+          localStorage.setItem("darkMode", false);
+        } else {
+          localStorage.setItem("darkMode", true);
+        }
+      }
+    </script>
+  </body>
+</html>
